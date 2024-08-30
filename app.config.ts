@@ -10,6 +10,11 @@ export default createApp({
       dir: "./public",
     },
     {
+      name: "ssr",
+      type: "http",
+      handler: "./src/main.server.ts",
+    },
+    {
       name: "client",
       type: "spa",
       handler: "./index.html",
