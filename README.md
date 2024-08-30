@@ -1,6 +1,8 @@
-# Analog App
+# Angular Start: Analog SFCs, Vinxi, and Server Functions
 
-This project was generated with [Analog](https://analogjs.org), the fullstack meta-framework for Angular.
+- [Analog](https://analogjs.org)
+- [Angular](https://angular.dev)
+- [Vinxi](https://vinxi.vercel.app)
 
 ## Setup
 
@@ -8,11 +10,11 @@ Run `npm install` to install the application dependencies.
 
 ## Development
 
-Run `npm start` for a dev server. Navigate to `http://localhost:5173/`. The application automatically reloads if you change any of the source files.
+Run `npm run dev` for a dev server. Navigate to `http://localhost:3000/`.
 
 ## Build
 
-Run `npm run build` to build the client/server project. The client build artifacts are located in the `dist/analog/public` directory. The server for the API build artifacts are located in the `dist/analog/server` directory.
+Run `npm run build` to build the client/server project. The build artifacts are located in the `.output` directory.
 
 ## Community
 
