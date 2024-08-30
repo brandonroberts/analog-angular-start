@@ -13,6 +13,13 @@ export default createApp({
       name: "ssr",
       type: "http",
       handler: "./src/main.server.ts",
+      plugins: () => [
+        angular({
+          experimental: {
+            supportAnalogFormat: true
+          }
+        }),
+      ],
     },
     {
       name: "client",

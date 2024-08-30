@@ -6,6 +6,7 @@ import { renderApplication } from '@angular/platform-server';
 import { provideServerContext } from '@analogjs/router/server';
 import { ServerRequest } from '@analogjs/router/tokens';
 import { defineEventHandler } from 'vinxi/http';
+import template from '../index.html?raw';
 
 import { config } from './app/app.config.server';
 import App from './app/app-root.analog';
@@ -20,7 +21,7 @@ export function bootstrap() {
 
 export default defineEventHandler(async(event) => {
   const html = await renderApplication(bootstrap, {
-    document,
+    document: template,
     url: event.node.req.originalUrl,
     platformProviders: [provideServerContext({ req: event.node.req as ServerRequest, res: event.node.res })],
   });
