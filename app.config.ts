@@ -23,7 +23,7 @@ export default createApp({
     },
     {
       name: "client",
-      type: "spa",
+      type: "client",
       handler: "./index.html",
       base: "/_base",
       plugins: () => [
