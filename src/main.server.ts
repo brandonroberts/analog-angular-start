@@ -6,7 +6,7 @@ import { renderApplication } from '@angular/platform-server';
 import { provideServerContext } from '@analogjs/router/server';
 import { ServerRequest } from '@analogjs/router/tokens';
 import { defineEventHandler } from 'vinxi/http';
-import template from '../index.html?raw';
+import template from '../index.client.html?raw';
 
 import { config } from './app/app.config.server';
 import App from './app/app-root.analog';

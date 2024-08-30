@@ -24,7 +24,7 @@ export default createApp({
     {
       name: "client",
       type: "client",
-      handler: "./index.html",
+      handler: "./src/main.ts",
       base: "/_base",
       plugins: () => [
         angular({
