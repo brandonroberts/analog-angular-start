@@ -16,9 +16,7 @@
 </script>
 
 <template>
-  <h2>Analog</h2>
-
-  <h3>The fullstack meta-framework for Angular!</h3>
+  <h2>Angular Start: Analog SFCs, Vinxi, and Server Functions</h2>
 
   <p>
     <a href="https://analogjs.org" target="_blank">Docs</a> |
