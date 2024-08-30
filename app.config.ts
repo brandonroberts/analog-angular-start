@@ -18,6 +18,9 @@ export default createApp({
         angular({
           transformFilter(code) {
             return !code.includes('createServerReference');
+          },
+          experimental: {
+            supportAnalogFormat: true
           }
         }),
         serverFunctions.client()

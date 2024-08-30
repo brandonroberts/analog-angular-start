@@ -9,8 +9,8 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter([
-      { path: '', pathMatch: 'full', loadComponent: () => import('./pages/index.page') },
-      { path: '**', loadComponent: () => import('./pages/index.page') }
+      { path: '', pathMatch: 'full', loadComponent: () => import('./pages/index.page.analog') },
+      { path: '**', loadComponent: () => import('./pages/index.page.analog') }
     ]),
     provideHttpClient(
       withFetch(),
