@@ -14,6 +14,19 @@ export default createApp({
       type: "http",
       handler: "./src/main.server.ts",
       plugins: () => [
+        {
+          config() {
+            return {
+              ssr: {
+                noExternal: [
+                  '@angular/**',
+                  '@analogjs/**',
+                  'zone.js/**'
+                ]
+              }
+            }
+          },
+        },
         angular({
           experimental: {
             supportAnalogFormat: true
