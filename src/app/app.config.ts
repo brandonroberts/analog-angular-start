@@ -1,20 +1,19 @@
 import {
   provideHttpClient,
   withFetch,
-  withInterceptors,
 } from '@angular/common/http';
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideClientHydration } from '@angular/platform-browser';
-import { provideFileRouter, requestContextInterceptor } from '@analogjs/router';
+import { provideRouter } from '@angular/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideFileRouter(),
+    provideRouter([
+      { path: '', pathMatch: 'full', loadComponent: () => import('./pages/index.page') },
+      { path: '**', loadComponent: () => import('./pages/index.page') }
+    ]),
     provideHttpClient(
       withFetch(),
-      withInterceptors([requestContextInterceptor])
     ),
-    provideClientHydration(),
   ],
 };

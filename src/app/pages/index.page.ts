@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+
+import { getPosts } from './get-posts';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +17,8 @@ import { Component } from '@angular/core';
         >Sponsor</a
       >
     </p>
+
+    <button (click)="increment()">Count {{ count() }}</button>
   `,
   styles: `
     :host {
@@ -25,4 +29,14 @@ import { Component } from '@angular/core';
     }
   `,
 })
-export default class HomeComponent {}
+export default class HomeComponent {
+  count = signal(0);
+
+  ngOnInit() {
+    getPosts().then(console.log);
+  }
+
+  increment() {
+    this.count.update(cnt => ++cnt);
+  }
+}

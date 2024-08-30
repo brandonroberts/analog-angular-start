@@ -7,9 +7,9 @@
   },
   "scripts": {
     "ng": "ng",
-    "dev": "ng serve",
+    "dev": "vinxi dev",
     "start": "npm run dev",
-    "build": "ng build",
+    "build": "vinxi build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -43,7 +43,9 @@
     "@analogjs/vitest-angular": "^1.7.3-beta.1",
     "@angular/cli": "^18.0.0",
     "@angular/compiler-cli": "^18.0.0",
+    "@vinxi/server-functions": "^0.4.2",
     "typescript": "~5.4.2",
+    "vinxi": "^0.4.2",
     "vite": "^5.0.0"
   }
 }
