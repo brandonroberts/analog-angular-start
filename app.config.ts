@@ -25,7 +25,7 @@ export default createApp({
       name: "client",
       type: "spa",
       handler: "./index.html",
-      base: "/",
+      base: "/_base",
       plugins: () => [
         angular({
           transformFilter(code) {
